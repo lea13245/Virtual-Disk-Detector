@@ -69,7 +69,7 @@ Write-Warn "El análisis puede tardar un poco dependiendo del tamaño del disco.
 
 #region USN Scan
 Write-Section "USN Journal – Actividad reciente NTFS"
-Write-Status "Analizando USN Journal en todo el disco, excluyendo rutas sensibles..."
+Write-Status "Analizando USN Journal en todo el disco..."
 
 $usn = fsutil usn readjournal C: 2>$null | Select-String '\.vhd|\.vhdx|\.vmdk'
 
